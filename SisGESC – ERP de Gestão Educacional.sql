@@ -1,3 +1,7 @@
+CREATE DATABASE projetoSisgesc;
+SHOW databases;
+USE projetoSisgesc;
+
 CREATE TABLE `pessoas` (
   `cpf` char(11) UNIQUE PRIMARY KEY NOT NULL,
   `nome` varchar(255),
