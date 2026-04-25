@@ -12,7 +12,7 @@ CREATE TABLE `telefones` (
   `cpf_pessoa` char(11),
   `ddd` char(2),
   `numero` varchar(9),
-  `tipo` varchar(50), -- Reduzido de 255 para 50
+  `tipo` varchar(50), 
   PRIMARY KEY (`cpf_pessoa`, `ddd`, `numero`)
 );
 
@@ -26,7 +26,7 @@ CREATE TABLE `enderecos` (
   `cpf_pessoa` char(11),
   `tipo` varchar(50),
   `cep` varchar(8),
-  `numero` varchar(20), -- Ninguém mora num número de 255 caracteres
+  `numero` varchar(20),
   `rua` varchar(150),
   `complemento` varchar(150),
   `bairro` varchar(100),
@@ -85,15 +85,15 @@ CREATE TABLE `cursos` (
 );
 
 CREATE TABLE `salas` (
-  `numero_sala` varchar(50) PRIMARY KEY, -- Reduzido para caber no índice
+  `numero_sala` varchar(50) PRIMARY KEY, 
   `capacidade` int
 );
 
 CREATE TABLE `turmas` (
   `codigo_idioma` varchar(3),
   `codigo_nivel` varchar(10),
-  `numero_sala` varchar(50), -- Reduzido
-  `horario` varchar(100),    -- Reduzido de 255 para 100
+  `numero_sala` varchar(50), 
+  `horario` varchar(100),   
   `cpf_professor` char(11),
   `data_inicio` date,
   `data_fim` date,
